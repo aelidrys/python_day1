@@ -2,13 +2,9 @@ import sys
 
 
 def building(string: str) -> None:
-    '''Print the number of elements in a string
-    also the number of each tpye of elements:
-    upper-case
-    lwer-case
-    punctuation
-    spaces
-    digits'''
+    '''Print the number of characters in a string
+also the number 0f its upper-case characters, lower-case characters,
+    punctuation characters, digits and spaces.'''
 
     digits = 0
     punctuation = 0
@@ -47,3 +43,4 @@ if __name__ == "__main__":
         print("AssertionError: more than one argument is provided")
         exit(1)
     building(string)
+    # print(building.__doc__)

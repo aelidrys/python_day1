@@ -5,7 +5,6 @@ ft_set = {"Hello", "tutu!"}
 ft_dict = {"Hello" : "titi!"}
 
 
-
 #my code here
 ft_list[1] = 'World!'
 
@@ -17,8 +16,6 @@ ft_set.remove("tutu!")
 ft_set.add("Benguerir!")
 
 ft_dict["Hello"] = "1337!!"
-
-
 
 
 print(ft_list)

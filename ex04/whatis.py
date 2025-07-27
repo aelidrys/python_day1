@@ -1,7 +1,6 @@
 import sys
 
 args = sys.argv
-# print(f"args = {args}")
 
 if len(args) == 1:
     exit(0)
@@ -24,7 +23,7 @@ if len(number) > 1000:
     exit(1)
 
 
-if int(number)%2 == 0:
+if int(number) % 2 == 0:
     print("I'm Even.")
 else:
     print("I'm Odd.")

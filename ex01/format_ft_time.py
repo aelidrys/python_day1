@@ -3,7 +3,7 @@ import datetime
 
 dtime = datetime.datetime.now()
 formatted_time = dtime.strftime("%b %d %Y")
-timeNow = time.time()
+timeNow = time.time() 
 scientific_notation_timeNow = "{:.2e}".format(timeNow)
 timeNow = "{:,.4f}".format(timeNow)
 
