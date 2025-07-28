@@ -2,13 +2,13 @@
 
 class ft_filter:
 
-    '''ft_filter(function or None, iterable) --> filter object
+    '''ft_filter(function or None, iterable) --> ft_filter object
 
 Return an iterator yielding those items of iterable for which function(item)
 is true. If function is None, return the items that are true.'''
-    index = 0
 
     def __init__(self, fun, iterable):
+        self.index = 0
         if fun is None:
             self.filtred = [item for item in iterable if item]
         else:
@@ -25,16 +25,6 @@ is true. If function is None, return the items that are true.'''
         return item
 
 
-# def ft_filter1(function, iterable):
-#     '''ft_filter(function or None, iterable) --> filter object
-# Return an iterator yielding those items of iterable for which function(item)
-# is true. If function is None, return the items that are true.'''
-#     if function is None:
-#         return (item for item in iterable if item)
-#     else:
-#         return (item for item in iterable if function(item))
-
-
 def isEven(number):
     if number % 2 == 0:
         return True
@@ -43,7 +33,7 @@ def isEven(number):
 if __name__ == '__main__':
 
     data = [4, 5, 8, 5, 2, 1, 6]
-    res = ft_filter(lambda x: False if x % 2 == 0 else True, data)
+    res = ft_filter(lambda x: x % 2 == 0, data)
     print(f"res = {res}")
 
     for elem in res:

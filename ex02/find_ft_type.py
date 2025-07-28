@@ -1,9 +1,9 @@
 
 
 def all_thing_is_obj(obj: any) -> int:
-    vlist = ['dict', 'list', 'set', 'tuple']
+    t_list = ['dict', 'list', 'set', 'tuple']
     type_name = type(obj).__name__
-    if type_name in vlist:
+    if type_name in t_list:
         print(f"{type_name.capitalize()} : {type(obj)}")
         return 42
     if type_name == 'str':

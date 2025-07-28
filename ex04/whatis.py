@@ -2,7 +2,7 @@ import sys
 
 args = sys.argv
 
-if len(args) == 1:
+if len(args) < 2:
     exit(0)
 
 if len(args) > 2:
@@ -14,7 +14,7 @@ number = args[1]
 if len(number) == 0:
     exit(0)
 
-if number.isdigit() is False and not((number[0] == '-' or number[0] == '+') and number[1:].isdigit() is True):
+if not number.isdigit() and not ((number[0] == '-' or number[0] == '+') and number[1:].isdigit()):
     print("AssertionError: argument is not an integer")
     exit(1)
 
