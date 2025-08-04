@@ -1,5 +1,4 @@
 
-
 def all_thing_is_obj(obj: any) -> int:
     t_list = ['dict', 'list', 'set', 'tuple']
     type_name = type(obj).__name__

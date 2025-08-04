@@ -2,8 +2,9 @@ import sys
 
 
 def building(string: str) -> None:
-    '''Print the number of characters in a string
-also the number 0f its upper-case characters, lower-case characters,
+    '''building(string: str) --> None
+Print the number of all characters in a string
+also the number of its upper-case characters, lower-case characters,
     punctuation characters, digits and spaces.'''
 
     digits = 0
@@ -33,14 +34,26 @@ also the number 0f its upper-case characters, lower-case characters,
     print(f"{digits} digits")
 
 
-if __name__ == "__main__":
+def main():
+    '''main() --> None
+Get the string from command line args or input and call building function.'''
+
     args = sys.argv
+
+    try:
+        assert len(args) <= 2, "more than one argument is provided"
+    except AssertionError as e:
+        print(f"AssertionError: {e}")
+        exit(0)
+
     if len(args) == 1:
-        string = input("What is the text to count?\n")
+        print("What is the text to count?")
+        string = sys.stdin.read()
     elif len(args) == 2:
         string = args[1]
-    else:
-        print("AssertionError: more than one argument is provided")
-        exit(1)
+
     building(string)
-    # print(building.__doc__)
+
+
+if __name__ == "__main__":
+    main()
